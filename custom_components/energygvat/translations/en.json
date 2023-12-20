@@ -1,0 +1,26 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Device is already configured"
+        },
+        "error": {
+            "cannot_connect": "Failed to connect",
+            "invalid_auth": "Invalid authentication",
+            "unknown": "Unexpected error"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "Biomasse": "b",
+                    "Erdgas": "e",
+                    "Nettoimporte": "n",
+                    "PollingInterval": "p",
+                    "Sonne": "s",
+                    "Sonstige": "d",
+                    "Wasser": "w",
+                    "Wind": "w"
+                }
+            }
+        }
+    }
+}

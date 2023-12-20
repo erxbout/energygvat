@@ -1,0 +1,15 @@
+{
+  "domain": "energygvat",
+  "name": "energygvat",
+  "codeowners": [
+    "@erxbout"
+  ],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://www.home-assistant.io/integrations/energygvat",
+  "homekit": {},
+  "iot_class": "cloud_polling",
+  "requirements": [],
+  "ssdp": [],
+  "zeroconf": []
+}

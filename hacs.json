@@ -1,0 +1,6 @@
+{
+    "name": "EnergyGvAt",
+    "content_in_root": false,
+    "domains": ["energygvat", "sensor"],
+    "render_readme": true
+}

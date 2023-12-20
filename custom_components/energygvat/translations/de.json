@@ -1,0 +1,27 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Device is already configured"
+        },
+        "error": {
+            "cannot_connect": "Failed to connect",
+            "invalid_auth": "Invalid authentication",
+            "unknown": "Unexpected error"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "Biomasse": "Biomass",
+                    "Erdgas": "Natural gas",
+                    "Nettoimporte": "Net imports",
+                    "PollingInterval": "Polling interval",
+                    "Sonne": "Sun",
+                    "Sonstige": "Undefined",
+                    "Wasser": "Water",
+                    "Wind": "Wind"
+                },
+                "title": "energygvat"
+            }
+        }
+    }
+}

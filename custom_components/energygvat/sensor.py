@@ -125,6 +125,7 @@ class EnergyProductionSensor(CoordinatorEntity, SensorEntity):
         super().__init__(coordinator, context=label)
         self._name = "EnergyGridAT_" + label
         self._label = label
+        self._state = 0
 
     @callback
     def _handle_coordinator_update(self) -> None:
@@ -161,6 +162,10 @@ class EnergyProductionSensor(CoordinatorEntity, SensorEntity):
 
         return result
 
+    @property
+    def native_unit_of_measurement(self):
+        return "%"
+    
     @property
     def suggested_display_precision(self):
         return 2

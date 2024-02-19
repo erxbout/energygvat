@@ -18,21 +18,6 @@ _LOGGER = logging.getLogger(__name__)
 labels = ["Wasser", "Sonne", "Wind", "Biomasse", "Erdgas", "Nettoimporte", "Sonstige"]
 
 
-class PlaceholderHub:
-    """Placeholder class to make tests pass.
-
-    TODO Remove this placeholder class and replace with things from your PyPI package.
-    """
-
-    def __init__(self, host: str) -> None:
-        """Initialize."""
-        self.host = host
-
-    async def authenticate(self, username: str, password: str) -> bool:
-        """Test if we can authenticate with the host."""
-        return True
-
-
 async def validate_input(hass: HomeAssistant, data: dict[str, Any]) -> dict[str, Any]:
     """Validate the user input allows us to connect.
 
@@ -54,7 +39,6 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         """Handle the initial step."""
         errors: dict[str, str] = {}
         if user_input is not None:
-            print(user_input)
             try:
                 info = await validate_input(self.hass, user_input)
             except CannotConnect:

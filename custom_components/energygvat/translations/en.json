@@ -11,14 +11,14 @@
         "step": {
             "user": {
                 "data": {
-                    "Biomasse": "b",
-                    "Erdgas": "e",
-                    "Nettoimporte": "n",
-                    "PollingInterval": "p",
-                    "Sonne": "s",
-                    "Sonstige": "d",
-                    "Wasser": "w",
-                    "Wind": "w"
+                    "Biomasse": "Biomass",
+                    "Erdgas": "Natural gas",
+                    "Nettoimporte": "Net imports",
+                    "PollingInterval": "Polling interval",
+                    "Sonne": "Sun",
+                    "Sonstige": "Undefined",
+                    "Wasser": "Water",
+                    "Wind": "Wind"
                 }
             }
         }

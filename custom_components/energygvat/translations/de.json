@@ -11,13 +11,13 @@
         "step": {
             "user": {
                 "data": {
-                    "Biomasse": "Biomass",
-                    "Erdgas": "Natural gas",
-                    "Nettoimporte": "Net imports",
+                    "Biomasse": "Biomasse",
+                    "Erdgas": "Erdgas",
+                    "Nettoimporte": "Nettoimporte",
                     "PollingInterval": "Polling interval",
-                    "Sonne": "Sun",
-                    "Sonstige": "Undefined",
-                    "Wasser": "Water",
+                    "Sonne": "Sonne",
+                    "Sonstige": "Sonstige",
+                    "Wasser": "Wasser",
                     "Wind": "Wind"
                 },
                 "title": "energygvat"

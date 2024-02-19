@@ -1,23 +1,21 @@
+from datetime import date, datetime, timedelta
+from decimal import Decimal
+import logging
+
+import async_timeout
 import requests
 
-from homeassistant.core import HomeAssistant
-from homeassistant.config_entries import ConfigEntry
-from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.components.sensor import PLATFORM_SCHEMA, SensorEntity, StateType
-
+from homeassistant.config_entries import ConfigEntry
+from homeassistant.core import HomeAssistant, callback
+from homeassistant.exceptions import ConfigEntryAuthFailed
+from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.update_coordinator import (
     CoordinatorEntity,
     DataUpdateCoordinator,
     UpdateFailed,
 )
-from homeassistant.core import callback
-from homeassistant.exceptions import ConfigEntryAuthFailed
 
-from decimal import Decimal
-from datetime import timedelta, date, datetime
-import logging
-
-import async_timeout
 from .const import DOMAIN
 
 _LOGGER = logging.getLogger(__name__)
@@ -54,7 +52,7 @@ async def async_setup_entry(
 
     for x in config_entry.data:
         for label in labels:
-            if label == x and config_entry.data[x] == True:
+            if label == x and config_entry.data[x] is True:
                 entities.append(EnergyProductionSensor(coordinator, label))
 
     async_add_entities(entities)
@@ -165,7 +163,7 @@ class EnergyProductionSensor(CoordinatorEntity, SensorEntity):
     @property
     def native_unit_of_measurement(self):
         return "%"
-    
+
     @property
     def suggested_display_precision(self):
         return 2
